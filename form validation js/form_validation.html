@@ -11,7 +11,14 @@
                 username.focus();
                 return false;
             }
-
+            //Check if email field is empty
+            if (email_address.value == "") {
+                alert("Please enter the email");
+                email_address.focus();
+                return false;
+            }
+            //If all is well return true.
+            return true;
             }
     </script>
     <title>Contact Details</title>
