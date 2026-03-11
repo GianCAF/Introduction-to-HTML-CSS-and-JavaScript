@@ -5,3 +5,8 @@ function displayEmployees() {
         .join('');
     document.getElementById('employeesDetails').innerHTML = totalEmployees;
 }
+
+function calculateTotalSalaries() {
+    const totalSalaries = employees.reduce((acc, employee) => acc + employee.salary, 0);
+    alert(`Total Salaries: $${totalSalaries}`);
+}
