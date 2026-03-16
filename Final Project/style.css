@@ -74,12 +74,42 @@ h2 {
     padding-bottom: 10px;
 }
 
-.grid-skills,
-.grid-recommendations {
+.grid-skills {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     margin-top: 20px;
+}
+
+.grid-recommendations {
+    display: grid;
+    /* Esto crea 3 columnas iguales de forma automática */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card-rec {
+    border: 1px solid #0f0f0f;
+    /* Borde gris claro */
+    padding: 25px;
+    border-radius: 8px;
+    /* Bordes redondeados */
+    background-color: #fff;
+    font-style: italic;
+    /* Estilo de cita */
+    color: #333;
+    line-height: 1.6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    /* Sombra suave para profundidad */
+}
+
+/* Ajuste responsivo para que no se vea mal en pantallas pequeñas */
+@media (max-width: 900px) {
+    .grid-recommendations {
+        grid-template-columns: 1fr;
+        /* Una sola columna en pantallas pequeñas */
+    }
 }
 
 .card {
