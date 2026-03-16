@@ -24,23 +24,43 @@ header {
 }
 
 /* Efecto hover para la navegación */
+/* Configuración base de los enlaces del nav */
 nav a {
     color: white;
     text-decoration: none;
     margin-left: 20px;
     font-weight: normal;
-    /* Asegura que el estado inicial sea normal */
-    transition: font-weight 0.2s, color 0.2s;
-    /* Hace que el cambio sea suave */
+    position: relative;
+    /* Necesario para posicionar la línea debajo */
+    padding-bottom: 5px;
+    /* Espacio para que la línea no toque las letras */
+    transition: font-weight 0.3s;
 }
 
+/* El elemento de la línea (invisible inicialmente) */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    /* Empieza en 0 (invisible) */
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-out;
+    /* Animación de deslizamiento */
+}
+
+/* Efecto al pasar el mouse */
 nav a:hover {
     font-weight: bold;
-    /* Aquí ocurre la magia: se vuelve negritas */
-    color: #e0e0e0;
-    /* Opcional: un ligero cambio de color para mejorar el contraste */
+    /* Pone las letras en negritas */
 }
 
+nav a:hover::after {
+    width: 100%;
+    /* La línea crece hasta ocupar todo el ancho */
+}
 /* Hero */
 .hero {
     display: flex;
