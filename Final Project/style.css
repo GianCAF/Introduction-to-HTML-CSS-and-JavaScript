@@ -177,3 +177,29 @@ button:hover {
     background: var(--primary-purple);
     color: white;
 }
+
+/* Estilo del botón Back to Top */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-purple);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);
+    background-color: #550a8a;
+    /* Un tono ligeramente más oscuro al pasar el cursor */
+}
