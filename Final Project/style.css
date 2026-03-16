@@ -34,17 +34,32 @@ nav a {
     display: flex;
     justify-content: center;
     padding: 50px;
+}
+
+.hero-container {
+    display: flex;
+    /* Esto pone la imagen y el texto en fila */
     align-items: center;
+    /* Alinea verticalmente al centro */
+    justify-content: center;
+    gap: 40px;
+    /* Espacio entre imagen y texto */
+    max-width: 1000px;
+    width: 100%;
 }
 
 .avatar img {
-    width: 200px;
+    width: 250px;
+    /* Ajusta el tamaño a tu gusto */
+    height: 250px;
+    object-fit: cover;
     border-radius: 50%;
 }
 
 .hero-text {
     max-width: 600px;
-    margin-left: 40px;
+    margin-left: 0;
+    /* Eliminamos el margen forzado previo */
 }
 
 /* Secciones y Grids */
